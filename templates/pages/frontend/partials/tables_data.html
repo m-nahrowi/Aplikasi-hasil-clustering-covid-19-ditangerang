@@ -1,0 +1,22 @@
+{% for cl in label_data %}
+    <div class="col-12">
+        <table class="table dataTable">
+            <thead style="background-color: {{ cl[1] }};">
+                {% for c in columns %}
+                    <th>{{ c }}</th>
+                {% endfor %}
+            </thead>
+
+            <tbody>
+                {% for i, r in df.loc[df['clustering'] == loop.index-1].iterrows() %}
+                    <tr>
+                        {% for c in columns %}
+                            <th>{{ r[c] }}</th>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+    </div>
+{% endfor %}

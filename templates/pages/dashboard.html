@@ -1,0 +1,60 @@
+{% extends 'layouts/app2.html' %}
+
+{% block content %} 
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Hello.!</h4>
+    <p>Selamat datang, {{ session['user']['username'] }}.!</p>
+</div>
+
+<div class="container-fluid">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+        {% for s in _sum_data %}
+            <div class="col-lg-2 col-6">
+                <!-- small box -->
+                <div class="small-box">
+                    <div class="inner">
+                        <h3>{{ s['val'] }}</h3>
+                        <p>{{ s['key'] }}</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                    <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="card card-default">
+    <div class="card-header">
+        <h3 class="card-title">Hasil Data Scraping Penyebaran Covid-19</h3>
+        <div class="card-tools">
+            <a type="button" class="btn btn-primary btn-sm" href="/update-dataset">
+                <i class="fa fa-sync"></i> Update Dataset
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        {% if data|length > 0 %}
+            <table class="table table-bordered table-striped data-table">
+                <thead>
+                    {% for c in columns %}
+                        <th>{{ c }}</th>
+                    {% endfor %}
+                </thead>
+                <tbody>
+                    {% for i, r in data.iterrows() %}
+                    <tr>
+                        {% for c in columns %}
+                            <td>{{ r[c] }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

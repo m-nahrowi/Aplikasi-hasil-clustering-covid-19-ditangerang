@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <title>Pencegahan | Coronavirus (COVID-19) Pencegahan & Informasi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend/assets/css/bundle.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend/assets/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend/assets/css/styles-azure.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='leaflet/leaflet.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css">
+
+    {% block css %} {% endblock %}
+</head>
+
+<body class="nk-body">
+    <div class="nk-wrap">
+        <header class="nk-header bg-light has-overlay" id="home">
+            <div class="overlay shape shape-a-sm"></div>
+            <div class="nk-navbar is-light is-sticky" id="navbar">
+                <div class="container">
+                    <div class="nk-navbar-wrap">
+                        <div class="nk-navbar-logo logo">
+                            <a href="index.html" class="logo-link">
+                                <img class="logo-dark" src="{{ url_for('static', filename='frontend/images/logo-dark.png') }}" srcset="{{ url_for('static', filename='frontend/images/logo-dark2x.png') }} 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="{{ url_for('static', filename='frontend/images/logo-white.png') }}" srcset="{{ url_for('static', filename='frontend/images/logo-white2x.png') }} 2x"
+                                    alt="logo">
+                            </a>
+                        </div>
+                        <div class="nk-navbar-toggle d-lg-none"> <a href="#" class="toggle"
+                                data-menu-toggle="navbar-menu"><em class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
+                        </div>
+                        <nav class="nk-navbar-menu" id="navbar-menu">
+                            <!-- <ul class="nk-menu">
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        href="index.html">Home</a>
+                                </li>
+                            </ul> -->
+                            <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="/login" class="btn btn-sm scrollto nav-link">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nk-page-head">
+                <div class="container">
+                    <div class="nk-page-head-wrap">
+                        <div class="nk-page-head-text">
+                            <h5 class="subtitle">Pencegahan</h5>
+                            <h2 class="title">Lindungi diri anda dengan mencegah</h2>
+                        </div>
+                        <div class="nk-page-head-image">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/page-head.png') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main class="nk-pages">
+        {% block content %} {% endblock %}
+    </main>
+
+    <footer class="nk-footer bg-dark tc-light has-overlay">
+        <div class="overlay shape shape-c"></div>
+        <section class="section section-footer section-m tc-light">
+            <div class="container">
+                <div class="nk-footer-top">
+                    <div class="row g-gs gy-m">
+                        <div class="col-lg-3 col-md-9 mr-auto">
+                            <div class="wgs wgs-about">
+                                <div class="wgs-logo logo">
+                                    <a href="index.html" class="logo-link">
+                                        <img src="{{ url_for('static', filename='frontend/images/logo-white.png') }}" srcset="i{{ url_for('static', filename='frontend/mages/logo-white2x.png') }} 2x"
+                                        alt="logo">
+                                    </a>
+                                </div>
+                                <div class="wgs-about-text">
+                                    <p>This website is for health information and advice about coronavirus
+                                    (COVID-19), how to prevent and protect yourself from disease.</p>
+                                    <p>Learn about the government response to coronavirus on GOV.UK.</p>
+                                </div>
+                                <ul class="wgs-social">
+                                    <li><a href="#"><em class="icon ni ni-facebook-f"></em></a>
+                                    </li>
+                                    <li><a href="#"><em class="icon ni ni-twitter"></em></a>
+                                    </li>
+                                    <li><a href="#"><em class="icon ni ni-youtube-fill"></em></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-2">
+                            <div class="wgs wgs-menu">
+                                <h6 class="wgs-title">Quick Link</h6>
+                                <ul class="wgs-links">
+                                    <li><a class="scrollto" href="#symptoms">Symptoms</a>
+                                    </li>
+                                    <li><a class="scrollto" href="#prevention">Prevention</a>
+                                    </li>
+                                    <li><a class="scrollto" href="#protect">Protect Youself</a>
+                                    </li>
+                                    <li><a class="scrollto" href="#faq">FAQs</a>
+                                    </li>
+                                    <li><a class="scrollto" href="#about">About Corona</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-3">
+                            <div class="wgs wgs-menu">
+                                <h6 class="wgs-title">Helpfull link</h6>
+                                <ul class="wgs-links">
+                                    <li><a href="#">Healthcare Professionals</a>
+                                    </li>
+                                    <li><a href="#">Healthcare Facilities</a>
+                                    </li>
+                                    <li><a href="#">Older Adults & Medical Conditions</a>
+                                    </li>
+                                    <li><a href="#">Repare your Family</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-lg-2">
+                            <div class="wgs wgs-menu">
+                                <h6 class="wgs-title">Important Link</h6>
+                                <ul class="wgs-links">
+                                    <li><a href="#">WHO Website</a>
+                                    </li>
+                                    <li><a href="#">CDC Website</a>
+                                    </li>
+                                    <li><a href="#">NHS Website</a>
+                                    </li>
+                                    <li><a href="#">Harvard Health</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nk-footer-bottom">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="nk-copyright">&copy; 2020 KOVID-19. Template Made by <a
+                                href="https://softnio.com">Softnio</a>.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="nk-footer-links justify-content-md-end">
+                                    <li><a href="#">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="nk-dislaimer">
+                                    <p>Disclaimer: We hope you find the information presented on this website useful.
+                                        This website is for general information and raise awareness of (2019-nCoV) only.
+                                        <br class="d-none d-lg-block">All the information based on WHO, NHS and CDC
+                                        website. Information on our website is meant for awareness, if you have any
+                                    doubt please verify from respective site.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='adminlte/plugins/jquery/jquery.min.js') }}"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="{{ url_for('static', filename='adminlte/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="{{ url_for('static', filename='leaflet/leaflet.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.dataTable').DataTable();
+        } );
+    </script>
+    {% block script %} {% endblock %}
+</body>

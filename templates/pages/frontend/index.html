@@ -1,0 +1,273 @@
+{% extends 'layouts/app_front.html' %}
+
+{% block content %}
+<section class="section section-l bg-white section-advice ov-h" id="prevention">
+    <div class="container">
+        <div class="section-head text-center wide-lg">
+            <h5 class="subtitle">How to Protect Yourself?</h5>
+            <h2 class="title">Prevention <br class="d-sm-none"> &amp; advice</h2>
+            <p><strong>Cara terbaik untuk mencegah penyakit adalah dengan menghindari terkena virus ini.</strong> Tetap mengetahui informasi terbaru tentang wabah COVID-19, tersedia di situs web WHO dan melalui otoritas kesehatan masyarakat nasional dan lokal Anda.</p>
+        </div>
+        <div class="section-content">
+            <div class="row g-gs gy-sm-m">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="box3">
+                        <div class="box3-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/advice-a.png') }}" alt="">
+                        </div>
+                        <div class="box3-content">
+                            <h5 class="title">Sering cuci tangan</h5>
+                            <p>Bersihkan tangan Anda secara teratur dan menyeluruh dengan pembersih tangan berbasis alkohol atau cuci dengan sabun dan air setidaknya selama 20 detik.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="box3">
+                        <div class="box3-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/advice-b.png') }}" alt="">
+                        </div>
+                        <div class="box3-content">
+                            <h5 class="title">Jaga jarak sosial</h5>
+                            <p>Pertahankan jarak setidaknya 1 meter (3) antara Anda & siapa pun yang batuk atau bersin. Jika Anda terlalu dekat, mendapatkan kesempatan untuk terinfeksi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="box3">
+                        <div class="box3-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/advice-c.png') }}" alt="">
+                        </div>
+                        <div class="box3-content">
+                            <h5 class="title">Hindari menyentuh wajah</h5>
+                            <p>Tangan menyentuh banyak permukaan dan dapat membawa virus. Jadi, tangan bisa menularkan virus ke mata, hidung, atau mulut Anda dan bisa membuat Anda sakit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="box3">
+                        <div class="box3-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/advice-d.png') }}" alt="">
+                        </div>
+                        <div class="box3-content">
+                            <h5 class="title">Latih kebersihan pernapasan</h5>
+                            <p>Pertahankan kebersihan pernapasan yang baik seperti menutup mulut & hidung dengan siku tertekuk atau tisu saat batuk atau bersin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-l bg-light section-protect" id="protect">
+    <div class="container">
+        <div class="section-head text-center wide-lg">
+            <!-- <h5 class="subtitle">Do’s &amp; Don’ts</h5> -->
+            <h2 class="title">Peta Sebaran Covid-19 Kota Tangerang</h2>
+        </div>
+        <div class="section-content">
+            <div id="map" style="width:100%; height: 500px;"></div>
+            <br>
+            <center><h3>Hasil Clustering</h3></center>
+            <br>
+            <div class="row" id='tables-data'>
+                {% include 'pages/frontend/partials/tables_data.html' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-l bg-white section-handwash" id="handwash">
+    <div class="container mt-n4">
+        <div class="section-subhead text-center">
+            <h4 class="title">Follow steps to <br class="d-sm-none"> wash hands</h4> <a href="#faq"
+            class="btn btn-sm btn-transparent scrollto"><span>Why do I need wash hand</span><em
+            class="icon ni ni-arrow-long-right"></em></a>
+        </div>
+        <div class="section-content">
+            <div class="row g-gs justify-content-center">
+                <div class="col-6 col-mb-5 col-sm-4 col-lg-2">
+                    <div class="box4">
+                        <div class="box4-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/hand-a.png') }}" alt="">
+                        </div>
+                        <div class="box4-content">
+                            <h6 class="title">Soap on Hand</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-mb-5 col-sm-4 col-lg-2">
+                    <div class="box4">
+                        <div class="box4-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/hand-b.png') }}" alt="">
+                        </div>
+                        <div class="box4-content">
+                            <h6 class="title">Palm to Palm</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-mb-5 col-sm-4 col-lg-2">
+                    <div class="box4">
+                        <div class="box4-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/hand-c.png') }}" alt="">
+                        </div>
+                        <div class="box4-content">
+                            <h6 class="title">Between Fingers</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-mb-5 col-sm-4 col-lg-2">
+                    <div class="box4">
+                        <div class="box4-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/hand-d.png') }}" alt="">
+                        </div>
+                        <div class="box4-content">
+                            <h6 class="title">Back to Hands</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-mb-5 col-sm-4 col-lg-2">
+                    <div class="box4">
+                        <div class="box4-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/hand-e.png') }}" alt="">
+                        </div>
+                        <div class="box4-content">
+                            <h6 class="title">Clean with Water</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-mb-5 col-sm-4 col-lg-2">
+                    <div class="box4">
+                        <div class="box4-gfx">
+                            <img src="{{ url_for('static', filename='frontend/images/gfx/hand-f.png') }}" alt="">
+                        </div>
+                        <div class="box4-content">
+                            <h6 class="title">Focus on Wrist</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    var geoData = {{ geo|safe }}
+</script>
+<script type="text/javascript">
+    var labelData = {{ label_data|safe }}
+    var totalSum  = {{ _total_sum }}
+    function getColor(c) {
+        console.log(c)
+        return labelData[c][1]
+    }
+
+    function style(feature) {
+        return {
+            fillColor: getColor(feature.properties.cluster),
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7
+        };
+    }
+    var map = L.map('map', {
+        center: [-6.1760311,106.6384468],
+        zoom: 13
+    });
+    function _init_map()
+    { 
+        map.off();
+        map.remove();
+        map = L.map('map', {
+            center: [-6.1760311,106.6384468],
+            zoom: 13
+        });
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYmFtYmFuZ2t1biIsImEiOiJja3l3ZXVudzgwMXMyMm5xdm9ucTM3OWo1In0.mwatSX9eHZPoybtw_Ja08A', {
+            id: 'mapbox/light-v9',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(map);
+        L.geoJson(geoData,  {style: style}).addTo(map);
+    }
+
+    $(document).ready(function() {
+        _init_map()
+
+        setInterval(ajax_datasets, 60000); // Set interval for 60 seconds
+
+        function ajax_datasets(){
+            $.ajax({
+                url: '/update-dataset-ajax',
+                type: 'GET',
+                dataType: 'HTML',
+                async:true
+            })
+            .done(function(e) {
+                check_datasets()
+                console.log("success");
+            })
+            .fail(function() {
+                console.log("error");
+            })
+            .always(function() {
+                console.log("complete");
+            });
+        }
+    });
+
+    function check_datasets(){
+        $.ajax({
+            url: '/check-datasets',
+            type: 'GET',
+            dataType: 'JSON',
+            async: true
+        })
+        .done(function(e) {
+            if (e['data']['_total_sum'] != totalSum){
+                totalSum = e['data']['_total_sum']
+                geoData  = e['data']['geo']
+                setTimeout(_init_map(), 500);
+                renew_html();
+            }
+            
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+        
+    }
+
+    function renew_html(){
+        $.ajax({
+            url: '/renew-html',
+            type: 'GET',
+            dataType: 'HTML',
+            async: true
+        })
+        .done(function(e) {
+            $("#tables-data").html(e)
+            setTimeout(function() {
+                $('.dataTable').DataTable();
+            }, 500);
+        })
+        .fail(function() {
+            console.log("error");
+        })
+        .always(function() {
+            console.log("complete");
+        });
+        
+    }
+
+    
+</script>
+{% endblock %}
