@@ -4,7 +4,6 @@ from orator import DatabaseManager
 # config = {
 #     'mysql': {
 #         'driver'    : 'mysql',
-#         'host'      : 'newdemo.aplikasiskripsi.com',
 #         'database'  : '',
 #         'user'      : '',
 #         'password'  : '',
@@ -16,10 +15,10 @@ from orator import DatabaseManager
 config = {
     'mysql': {
         'driver'    : 'mysql',
-        'host'      : 'localhost',
-        'database'  : 'aplikasi_muhamad_nahrowi',
-        'user'      : 'root',
-        'password'  : '',
+        'host'      : '165.22.51.224',
+        'database'  : 'nahrowi',
+        'user'      : 'nahrowi',
+        'password'  : 'cA6NRGGTmNRe3d7h',
         'prefix'    : '',
         "charset": "utf8mb4"  # <-- here
     }
