@@ -1,3 +1,5 @@
+# Aplikasi Hasil Clustering COVID-19 di Tangerang
+
 Aplikasi web ini dikembangkan untuk menampilkan hasil clusterisasi penyebaran COVID-19 di wilayah Tangerang. Dengan menggunakan Flask sebagai backend dan Bootstrap untuk desain frontend, aplikasi ini menyediakan informasi mengenai zona bahaya, zona rawan, dan zona aman berdasarkan data penyebaran COVID-19.
 
 ## Fitur
@@ -13,3 +15,10 @@ Aplikasi web ini dikembangkan untuk menampilkan hasil clusterisasi penyebaran CO
 - **Bootstrap**: Untuk desain frontend yang responsif.
 - **JavaScript**: Untuk interaktivitas pada halaman web.
 - **HTML/CSS**: Untuk struktur dan gaya halaman web.
+
+## Instalasi
+
+1. Clone repository ini:
+   ```sh
+   git clone https://github.com/username/Aplikasi-hasil-clustering-covid-19-ditangerang.git
+   cd Aplikasi-hasil-clustering-covid-19-ditangerang
